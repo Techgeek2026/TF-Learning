@@ -32,3 +32,19 @@ select "Auto-apply run triggers". Then under "Connected workspace", click
 "connect workspace" and add network-project.
 ==============================================================================
 */
+
+/*
+============================================================================== 
+For Terraform Enterprise use the below which is more secure
+===============================================================================
+
+data "tfe_outputs" "networking" {
+  organization = "my-org-name"
+  workspace    = "networking-prod"
+}
+
+output "vpc_id" {
+  value = data.tfe_outputs.networking.values.vpc_id
+}
+
+*/
