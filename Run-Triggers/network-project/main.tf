@@ -1,6 +1,6 @@
 variable "public_ips" {
   type = list(string)
-  default = [ "8.8.8.8", "1.1.1.1" ]
+  default = [ "8.8.8.8", "1.1.1.1", "2.2.2.2" ]
 }
 
 resource "terraform_data" "network" {
