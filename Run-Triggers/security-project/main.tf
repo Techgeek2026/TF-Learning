@@ -40,7 +40,8 @@ select "Auto-apply run triggers". Then under "Connected workspace", click
 
 /*
 ============================================================================== 
-For Terraform Enterprise use the below which is more secure
+For Terraform Enterprise use the below which is more secure because it does not
+Require full access to workspace state to fetch outputs
 ===============================================================================
 
 data "tfe_outputs" "networking" {
